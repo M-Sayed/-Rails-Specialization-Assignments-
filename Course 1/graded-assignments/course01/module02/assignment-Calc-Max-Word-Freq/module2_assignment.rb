@@ -14,9 +14,10 @@ class LineAnalyzer
     freq = {} 
     words = @content.split(" ")
     words.each do |word|
-      freq[word.downcase] ||= 0
-      freq[word.downcase] += 1
-      @highest_wf_count = @highest_wf_count > freq[word.downcase] ? @highest_wf_count : freq[word.downcase]
+      word.downcase!
+      freq[word] ||= 0
+      freq[word] += 1
+      @highest_wf_count = @highest_wf_count > freq[word] ? @highest_wf_count : freq[word]
     end 
     freq.each do |key, val| 
       if val == @highest_wf_count
