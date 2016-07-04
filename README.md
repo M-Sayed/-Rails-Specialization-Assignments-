@@ -1,1 +1,5 @@
-# -Rails-Specialization-Assignments-
+## Ruby on Rails coursera specialization
+
+### Assignment Solutions.
+
+
